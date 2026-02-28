@@ -1,0 +1,71 @@
+.hours {
+  background: var(--dark-bg);
+}
+
+.hours__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hours__content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hours__note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: rgba(243, 156, 18, 0.1);
+  border-left: 4px solid var(--accent-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+.hours__schedule {
+  background: var(--dark-card);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--primary-color);
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-item .day {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.schedule-item .time {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 968px) {
+  .hours__wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
